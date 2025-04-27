@@ -15,8 +15,3 @@ echo "Disk Usage"
 df -h --total | awk '/total/{print "Total Disk: "$2", Used: "$1", Free: "$1}'
 echo
 
-# Recently Modified Files (Last 24 Hours)
-echo "Recently Modified Files (Last 24 Hours)"
-if command -v find >/dev/null 2>&1; then
-    find ~ -type f -mtime -1 -print 2>/dev/null
-fi
